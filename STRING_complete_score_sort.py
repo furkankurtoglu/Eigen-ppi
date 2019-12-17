@@ -10,7 +10,7 @@ url = 'https://www.uniprot.org/uploadlists/'
 #c_s_thresh =  int(sys.argv[2]) #combined interaction score threshold
 
 file_name='STRING_9606.protein.links.full.v11.0.txt'
-c_s_thresh = 999
+c_s_thresh = 990
 
 n = 1 #slice size
 protein_dict = {}
@@ -94,7 +94,7 @@ Prot_B.remove('To')
 
 f = open("STRING_p_p_interaction_"+str(c_s_thresh)+"_thr.txt", 'w')
 for protein1 in protein_dict.keys():
-    f.write("%s %s\n" % (protein_dict, protein_dict[protein1]))
+    f.write("%s %s\n" % (protein1, protein_dict[protein1]))
     ppi_counter_thresh += 1 
 
 print(str(ppi_counter_thresh),'ppi out of',str(ppi_counter),'ppi is above threshold')

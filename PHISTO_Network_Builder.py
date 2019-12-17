@@ -6,7 +6,7 @@ Created on Mon Dec  9 10:54:09 2019
 """
 
 
-file_name='PHISTO_Herpesviridae_Human_phi_data.csv'
+file_name='PHISTO_HerpesVirus_1.csv'
 line_counter = 0
 link_counter =0
 Links_1=[]
@@ -29,7 +29,7 @@ with open(file_name) as f:
         else:
             print('Redundant Interaction found')
             
-with open("PHISTO_p_p_interaction.txt", 'w') as f:
+with open("PHISTO_HerpesVirus_1_p_p_interaction.txt", 'w') as f:
     for i in range(len(protein_A)):
         f.write("%s %s\n" % (protein_A[i], protein_B[i]))
     f.close()
